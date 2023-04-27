@@ -3,6 +3,8 @@ const startBtn = document.getElementById('start-btn');
 const resetBtn = document.getElementById('reset-btn');
 const saikoroImg = document.getElementById('shake');
 const saikoroImg2 = document.getElementById('shake2');
+const saikoroImg3 = document.getElementById('shake3');
+
 let count
 
 const resetSrc = "img/saikoro.png";
@@ -10,6 +12,7 @@ const resetSrc = "img/saikoro.png";
 resetBtn.onclick = function() {
     saikoroImg.src = resetSrc;
     saikoroImg2.src = resetSrc;
+    saikoroImg3.src = resetSrc;
 }
 
 startBtn.onclick = function() {
@@ -19,6 +22,9 @@ startBtn.onclick = function() {
 
         const random1 = Math.floor(Math.random() * imgSrc.length);
         saikoroImg2.src = imgSrc[random1];
+
+        const random2 = Math.floor(Math.random() * imgSrc.length);
+        saikoroImg3.src = imgSrc[random2];
     }
 
     function saikoroAnime() {
